@@ -1,5 +1,25 @@
 body {
+  margin: 0;
   background-color: #151B54;
   color: floralWhite;
   font-family: fantasy, sans-serif;
 }
+/* Header container */
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+/* Name text */
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* White line */
+.header hr {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  border: none;
+  margin: 0 auto;
