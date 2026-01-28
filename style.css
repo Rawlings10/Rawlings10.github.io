@@ -1,47 +1,54 @@
 body {
   margin: 0;
+  background-color: #0e141c;
+  color: #cfd8ff;
   font-family: Arial, sans-serif;
-  background-color: #0f0f0f;
-  color: white;
 }
 
-/* HEADER LAYOUT */
+/* Header section */
 .header {
-  padding: 60px 80px;
+  padding: 80px 60px;
 }
 
-.header-content {
+/* Layout container */
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
 }
 
-/* LEFT SIDE */
+/* LEFT: Text content */
 .header-text {
   width: 65%;
 }
 
-.header h1 {
+/* Name */
+.header-text h1 {
   font-family: 'Cinzel', serif;
-  font-size: 48px;
-  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: floralwhite;
 }
 
-hr {
+/* Line */
+.header-text hr {
   width: 100%;
+  height: 3px;
+  background-color: #7aa2ff;
   border: none;
-  border-top: 2px solid white;
-  margin: 15px 0 25px;
+  margin-bottom: 25px;
 }
 
+/* Paragraphs */
 .subtitle {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* RIGHT SIDE IMAGE */
+/* RIGHT: Profile image */
 .header-image {
   width: 35%;
   display: flex;
@@ -49,14 +56,14 @@ hr {
 }
 
 .header-image img {
-  max-width: 280px;     /* controls size */
-  width: 100%;
-  height: auto;         /* prevents vertical stretching */
-  border-radius: 12px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #7aa2ff;
 }
 
-/* MAIN CONTENT */
+/* Main content */
 .content {
-  padding: 40px 80px;
+  padding: 80px 60px;
 }
