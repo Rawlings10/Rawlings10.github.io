@@ -5,21 +5,10 @@ body {
   color: white;
 }
 
-/* HEADER LAYOUT */
+/* HEADER TEXT */
 .header {
   padding: 60px 80px;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* LEFT SIDE */
-.header-text {
-  width: 65%;
+  max-width: 70%;
 }
 
 .header h1 {
@@ -29,7 +18,6 @@ body {
 }
 
 hr {
-  width: 100%;
   border: none;
   border-top: 2px solid white;
   margin: 15px 0 25px;
@@ -41,19 +29,22 @@ hr {
   margin-bottom: 20px;
 }
 
-/* RIGHT SIDE IMAGE */
-.header-image {
-  width: 35%;
-  display: flex;
-  justify-content: center;
+/* PROFILE IMAGE – TOP RIGHT */
+.profile-pic {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  width: 140px;
+  height: 140px;
+  z-index: 100;
 }
 
-.header-image img {
-  max-width: 280px;     /* controls size */
+.profile-pic img {
   width: 100%;
-  height: auto;         /* prevents vertical stretching */
-  border-radius: 12px;
+  height: 100%;
+  border-radius: 50%;        /* circular */
   object-fit: cover;
+  border: 3px solid white;   /* optional */
 }
 
 /* MAIN CONTENT */
