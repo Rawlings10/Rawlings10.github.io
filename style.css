@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: #0e141c;
-  color: blue angel;
+  color: #7aa2ff; /* soft blue text */
   font-family: Arial, sans-serif;
 }
 
@@ -20,14 +20,14 @@ body {
   font-size: 60px;
   font-weight: 700;
   margin: 0 0 15px 0;
-  color: blueAngel;
+  color: #eaf0ff; /* angelic white-blue */
 }
 
 /* Full-width animated line */
 .header hr {
   width: 0;
   height: 3px;
-  background-color: blueAngel;
+  background-color: #7aa2ff; /* blue line */
   border: none;
   margin: 0 auto 15px auto;
   animation: expandLine 1.2s ease-out forwards;
