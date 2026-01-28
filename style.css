@@ -12,6 +12,8 @@ body {
 
 /* Layout container */
 .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,8 +30,17 @@ body {
   font-family: 'Cinzel', serif;
   font-size: 60px;
   font-weight: 700;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   color: floralwhite;
+}
+
+/* NEW ROLE TEXT */
+.role {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7aa2ff;
+  margin-bottom: 15px;
 }
 
 /* Line */
@@ -52,7 +63,8 @@ body {
 .header-image {
   width: 35%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-image img {
@@ -63,7 +75,75 @@ body {
   border: 3px solid #7aa2ff;
 }
 
+/* PROFILE BUTTONS */
+.profile-buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 220px;
+}
+
+.profile-buttons a {
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid #7aa2ff;
+  color: #7aa2ff;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.profile-buttons a:hover {
+  background-color: #7aa2ff;
+  color: #0e141c;
+}
+
 /* Main content */
 .content {
   padding: 80px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* PROJECTS HEADER */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  color: #7aa2ff;
+  margin-bottom: 10px;
+}
+
+.section-header hr {
+  width: 100%;
+  height: 3px;
+  background-color: #7aa2ff;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text,
+  .header-image {
+    width: 100%;
+  }
+
+  .header-text h1 {
+    font-size: 42px;
+  }
+
+  .header-text hr {
+    width: 60%;
+    margin: 0 auto 25px;
+  }
 }
