@@ -1,55 +1,69 @@
-/* Page base */
 body {
   margin: 0;
   background-color: #0e141c;
-  color: #7aa2ff; /* soft blue text */
+  color: #cfd8ff;
   font-family: Arial, sans-serif;
 }
 
-/* Header at top-center */
+/* Header section */
 .header {
-  text-align: center;
-  padding-top: 60px;
-  padding-bottom: 40px;
-  background-color: #0e141c;
+  padding: 80px 60px;
+}
+
+/* Layout container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT: Text content */
+.header-text {
+  width: 65%;
 }
 
 /* Name */
-.header h1 {
+.header-text h1 {
   font-family: 'Cinzel', serif;
   font-size: 60px;
   font-weight: 700;
-  margin: 0 0 15px 0;
-  color: #eaf0ff; /* angelic white-blue */
+  margin: 0 0 20px 0;
+  color: floralwhite;
 }
 
-/* Full-width animated line */
-.header hr {
-  width: 0;
+/* Line */
+.header-text hr {
+  width: 100%;
   height: 3px;
-  background-color: #7aa2ff; /* blue line */
+  background-color: #7aa2ff;
   border: none;
-  margin: 0 auto 15px auto;
-  animation: expandLine 1.2s ease-out forwards;
+  margin-bottom: 25px;
 }
 
-/* Subtitle */
+/* Paragraphs */
 .subtitle {
-  font-size: 18px;
-  opacity: 0.9;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-/* Animation */
-@keyframes expandLine {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+/* RIGHT: Profile image */
+.header-image {
+  width: 35%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Main content section */
+.header-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #7aa2ff;
+}
+
+/* Main content */
 .content {
-  padding: 80px 40px;
+  padding: 80px 60px;
 }
