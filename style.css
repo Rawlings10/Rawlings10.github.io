@@ -1,25 +1,39 @@
 body {
   margin: 0;
-  background-color: #151B54;
-  color: floralWhite;
-  font-family: fantasy, sans-serif;
+  background-color: #1e3a8a;
+  color: white;
+  font-family: Arial, sans-serif;
+
+  /* This centers everything vertically & horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 /* Header container */
 .header {
   text-align: center;
-  margin-top: 40px;
 }
-/* Name text */
+
+/* Name */
 .header h1 {
-  font-size: 60px;
+  font-size: 56px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 /* White line */
 .header hr {
-  width: 200px;
+  width: 220px;
   height: 2px;
-  background-color: beige;
+  background-color: white;
   border: none;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
+}
+
+/* Subtitle text */
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
