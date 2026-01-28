@@ -1,39 +1,59 @@
+/* General page styling */
 body {
   margin: 0;
   background-color: #1e3a8a;
   color: white;
   font-family: Arial, sans-serif;
-
-  /* This centers everything vertically & horizontally */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-/* Header container */
+/* Sticky header */
 .header {
+  position: sticky;
+  top: 0;
+  width: 100%;
   text-align: center;
+  padding: 30px 0;
+  background-color: #1e3a8a;
+  z-index: 100;
 }
 
-/* Name */
+/* Name styling */
 .header h1 {
-  font-size: 56px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: floralwhite;
 }
 
-/* White line */
+/* Animated horizontal line */
 .header hr {
-  width: 220px;
-  height: 2px;
-  background-color: white;
+  width: 0;
+  height: 3px;
+  background-color: beige;
   border: none;
   margin: 0 auto 15px auto;
+  animation: expandLine 1.2s ease-out forwards;
 }
 
-/* Subtitle text */
+/* Subtitle */
 .subtitle {
   font-size: 18px;
   opacity: 0.9;
+}
+
+/* Animation for the line */
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* Temporary content area (for scrolling test) */
+.content {
+  height: 200vh;
+  padding: 40px;
 }
