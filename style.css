@@ -5,10 +5,21 @@ body {
   color: white;
 }
 
-/* HEADER TEXT */
+/* HEADER LAYOUT */
 .header {
   padding: 60px 80px;
-  max-width: 70%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.header-text {
+  width: 65%;
 }
 
 .header h1 {
@@ -18,6 +29,7 @@ body {
 }
 
 hr {
+  width: 100%;
   border: none;
   border-top: 2px solid white;
   margin: 15px 0 25px;
@@ -29,22 +41,19 @@ hr {
   margin-bottom: 20px;
 }
 
-/* PROFILE IMAGE – TOP RIGHT */
-.profile-pic {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  width: 140px;
-  height: 140px;
-  z-index: 100;
+/* RIGHT SIDE IMAGE */
+.header-image {
+  width: 35%;
+  display: flex;
+  justify-content: center;
 }
 
-.profile-pic img {
+.header-image img {
+  max-width: 280px;     /* controls size */
   width: 100%;
-  height: 100%;
-  border-radius: 50%;        /* circular */
+  height: auto;         /* prevents vertical stretching */
+  border-radius: 12px;
   object-fit: cover;
-  border: 3px solid white;   /* optional */
 }
 
 /* MAIN CONTENT */
