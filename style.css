@@ -28,6 +28,14 @@ body {
   margin: 0;
 }
 
+.role {
+  font-size: 18px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  margin-bottom: 12px;
+  color: #6aa9ff; /* soft blue */
+}
+
 hr {
   width: 100%;
   border: none;
