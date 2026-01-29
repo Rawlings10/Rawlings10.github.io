@@ -5,90 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rawlings Oduwa | Game Developer</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="header-container">
+<!-- LANGUAGE TOGGLE BUTTON -->
+<button id="langToggle">FR</button>
 
-      <!-- LEFT SIDE -->
-      <div class="header-text">
-        <h1>RAWLINGS ODUWA</h1>
-        <p class="role">Video Game Programmer / Designer</p>
-        <hr>
+<header class="header">
+  <div class="header-container">
 
-        <p class="subtitle">
-          I am a passionate game development student with over <strong>three years of hands-on experience</strong>
-          building interactive projects and learning industry-standard tools and technologies.
-        </p>
+    <!-- LEFT SIDE -->
+    <div class="header-text">
+      <h1>RAWLINGS ODUWA</h1>
 
-        <p class="subtitle">
-          My technical skill set includes working with
-          <em>Unreal Engine, Unity, C++, C#, Java, Python, and Blender</em>,
-          with a strong focus on gameplay systems, problem-solving, and clean code.
-        </p>
+      <p class="role"
+         data-en="Video Game Programmer / Designer"
+         data-fr="Programmeur / Concepteur de Jeux Vidéo">
+         Video Game Programmer / Designer
+      </p>
 
-        <p class="subtitle">
-          I am currently seeking a <strong>Summer 2026 internship</strong> where I can collaborate with a team,
-          continue learning, and contribute meaningfully to the development of engaging and impactful games.
-        </p>
-      </div>
-
-      <!-- RIGHT SIDE -->
-      <div class="header-image">
-        <img src="profile.jpg" alt="Rawlings Oduwa">
-
-        <!-- ICON LINKS (NO BUTTON SHAPE) -->
-        <div class="profile-icons">
-
-          <a href="https://www.linkedin.com/in/rawlings-oduwa-32066b2a7"
-             target="_blank"
-             class="icon-link"
-             data-tooltip="LinkedIn">
-            <img src="linkedin.png" alt="LinkedIn">
-          </a>
-
-          <a href="https://itch.io/profile/rawlings"
-             target="_blank"
-             class="icon-link"
-             data-tooltip="Itch.io">
-            <img src="itchio.png" alt="Itch.io">
-          </a>
-
-          <a href="Rawlings_Oduwa_Resume.pdf"
-             download
-             class="icon-link"
-             data-tooltip="Download Resume">
-            <img src="resume.png" alt="Resume">
-          </a>
-
-          <a href="https://github.com/Rawlings10"
-             target="_blank"
-             class="icon-link"
-             data-tooltip="GitHub">
-            <img src="github.png" alt="GitHub">
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="content">
-    <div class="section-header">
-      <h2>Projects</h2>
       <hr>
+
+      <p class="subtitle"
+         data-en="I am a game development student with over three years of hands-on experience building interactive projects and gameplay systems using industry-standard tools."
+         data-fr="Je suis un étudiant en développement de jeux avec plus de trois ans d’expérience pratique dans la création de projets interactifs et de systèmes de gameplay.">
+         I am a game development student with over three years of hands-on experience building interactive projects and gameplay systems using industry-standard tools.
+      </p>
+
+      <p class="subtitle"
+         data-en="My technical stack includes Unreal Engine, Unity, C++, C#, Java, Python, and Blender, with strong focus on gameplay logic, systems design, and clean code practices."
+         data-fr="Mes compétences techniques incluent Unreal Engine, Unity, C++, C#, Java, Python et Blender, avec un fort accent sur la logique de gameplay et la qualité du code.">
+         My technical stack includes Unreal Engine, Unity, C++, C#, Java, Python, and Blender, with strong focus on gameplay logic, systems design, and clean code practices.
+      </p>
+
+      <p class="subtitle"
+         data-en="I am currently seeking a Summer 2026 internship opportunity to collaborate, grow, and contribute to impactful game projects."
+         data-fr="Je recherche actuellement un stage pour l’été 2026 afin de collaborer, progresser et contribuer à des projets de jeux significatifs.">
+         I am currently seeking a Summer 2026 internship opportunity to collaborate, grow, and contribute to impactful game projects.
+      </p>
     </div>
 
-    <p>Projects coming soon...</p>
-  </main>
+    <!-- RIGHT SIDE -->
+    <div class="header-image">
+      <img src="profile.jpg" alt="Rawlings Oduwa">
+
+      <div class="profile-icons">
+        <a href="https://www.linkedin.com/in/rawlings-oduwa-32066b2a7" target="_blank" class="icon-link" data-tooltip="LinkedIn">
+          <img src="linkedin.png">
+        </a>
+
+        <a href="https://itch.io/profile/rawlings" target="_blank" class="icon-link" data-tooltip="itch.io">
+          <img src="itchio.png">
+        </a>
+
+        <a href="Rawlings_Oduwa_Resume.pdf" download class="icon-link" data-tooltip="Resume">
+          <img src="resume.png">
+        </a>
+
+        <a href="https://github.com/Rawlings10" target="_blank" class="icon-link" data-tooltip="GitHub">
+          <img src="github.png">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main class="content">
+  <div class="section-header">
+    <h2 data-en="Projects" data-fr="Projets">Projects</h2>
+    <hr>
+  </div>
+
+  <p data-en="Projects coming soon..." data-fr="Projets à venir...">
+    Projects coming soon...
+  </p>
+</main>
+
+<script>
+const btn = document.getElementById("langToggle");
+let current = "en";
+
+btn.onclick = () => {
+  current = current === "en" ? "fr" : "en";
+  btn.textContent = current === "en" ? "FR" : "EN";
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.textContent = el.dataset[current];
+  });
+};
+</script>
 
 </body>
 </html>
