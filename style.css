@@ -5,12 +5,30 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* LANGUAGE BUTTON — TOP RIGHT */
+#langToggle {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  background: #7aa2ff;
+  color: #0e141c;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 999;
+}
+
+#langToggle:hover {
+  filter: brightness(1.15);
+}
+
 /* HEADER */
 .header {
   padding: 70px 60px 20px;
 }
 
-/* Layout */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -20,7 +38,7 @@ body {
   gap: 50px;
 }
 
-/* LEFT TEXT */
+/* LEFT */
 .header-text {
   width: 65%;
 }
@@ -70,7 +88,7 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICONS — JUST ICONS */
+/* ICONS — NO SHAPES */
 .profile-icons {
   margin-top: 20px;
   display: flex;
@@ -80,20 +98,14 @@ body {
 .icon-link {
   position: relative;
   display: inline-flex;
-  text-decoration: none;
 }
 
-/* icon images */
 .icon-link img {
   width: 46px;
   height: 46px;
-  border: none;
-  background: none;
-  border-radius: 0;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* hover effect */
 .icon-link:hover img {
   transform: translateY(-4px);
   filter: brightness(1.25);
@@ -126,7 +138,6 @@ body {
   margin: 0 auto;
 }
 
-/* PROJECTS HEADER */
 .section-header {
   margin: 0 0 25px 0;
 }
@@ -146,7 +157,6 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-
   .header-container {
     flex-direction: column;
     text-align: center;
