@@ -83,8 +83,8 @@ body {
 }
 
 .profile-icons a img {
-  width: 58px;      /* increased from 50px */
-  height: 58px;     /* increased from 50px */
+  width: 68px;      /* increased from 50px */
+  height: 68px;     /* increased from 50px */
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
