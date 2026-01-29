@@ -75,23 +75,64 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICON LINKS (INCREASED AGAIN) */
+/* ICON BUTTONS */
 .profile-icons {
   margin-top: 30px;
   display: flex;
   gap: 26px;
 }
 
-.profile-icons a img {
-  width: 68px;      /* increased from 50px */
-  height: 68px;     /* increased from 50px */
-  transition: transform 0.3s ease, filter 0.3s ease;
-  cursor: pointer;
+/* Square button */
+.icon-btn {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: #141c2a;
+  border: 2px solid #7aa2ff;
+  border-radius: 8px; /* square with slight rounding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.profile-icons a img:hover {
-  transform: scale(1.22);  /* adjusted to match size */
-  filter: brightness(1.2);
+/* Icon image */
+.icon-btn img {
+  width: 34px;
+  height: 34px;
+}
+
+/* Hover effect */
+.icon-btn:hover {
+  background-color: #7aa2ff;
+  transform: translateY(-4px);
+}
+
+.icon-btn:hover img {
+  filter: brightness(0.1);
+}
+
+/* TOOLTIP */
+.icon-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7aa2ff;
+  color: #0e141c;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.icon-btn:hover::after {
+  opacity: 1;
 }
 
 /* Main content */
