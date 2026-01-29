@@ -75,51 +75,42 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICON BUTTONS */
+/* ICON LINKS — NO SHAPE */
 .profile-icons {
   margin-top: 30px;
   display: flex;
   gap: 26px;
 }
 
-/* TRUE SQUARE BUTTON */
-.icon-btn {
+/* Link wrapper */
+.icon-link {
   position: relative;
-  width: 64px;
-  height: 64px;
-  background-color: #141c2a;
-  border: 2px solid #7aa2ff;
-  border-radius: 6px; /* clearly square, not circular */
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
   text-decoration: none;
 }
 
-/* ICON IMAGE — FORCE NO CIRCLE */
-.icon-btn img {
-  width: 36px;
-  height: 36px;
-  border-radius: 0;     /* kills any circular styling */
-  background: none;     /* removes circular PNG illusion */
+/* Icon image */
+.icon-link img {
+  width: 58px;
+  height: 58px;
+  border-radius: 0;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
 }
 
-/* Hover */
-.icon-btn:hover {
-  background-color: #7aa2ff;
+/* Hover effect */
+.icon-link:hover img {
   transform: translateY(-4px);
-}
-
-.icon-btn:hover img {
-  filter: brightness(0.15);
+  filter: brightness(1.2);
 }
 
 /* TOOLTIP */
-.icon-btn::after {
+.icon-link::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -38px;
+  bottom: -36px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #7aa2ff;
@@ -133,7 +124,7 @@ body {
   transition: opacity 0.25s ease;
 }
 
-.icon-btn:hover::after {
+.icon-link:hover::after {
   opacity: 1;
 }
 
