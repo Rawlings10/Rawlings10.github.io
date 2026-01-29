@@ -82,35 +82,37 @@ body {
   gap: 26px;
 }
 
-/* Square button */
+/* TRUE SQUARE BUTTON */
 .icon-btn {
   position: relative;
   width: 64px;
   height: 64px;
   background-color: #141c2a;
   border: 2px solid #7aa2ff;
-  border-radius: 8px; /* square with slight rounding */
+  border-radius: 6px; /* clearly square, not circular */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   text-decoration: none;
 }
 
-/* Icon image */
+/* ICON IMAGE — FORCE NO CIRCLE */
 .icon-btn img {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;     /* kills any circular styling */
+  background: none;     /* removes circular PNG illusion */
 }
 
-/* Hover effect */
+/* Hover */
 .icon-btn:hover {
   background-color: #7aa2ff;
   transform: translateY(-4px);
 }
 
 .icon-btn:hover img {
-  filter: brightness(0.1);
+  filter: brightness(0.15);
 }
 
 /* TOOLTIP */
