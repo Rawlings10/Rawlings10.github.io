@@ -130,7 +130,7 @@ body {
 
 /* Main content */
 .content {
-  padding: 80px 60px;
+  padding: 30px 60px 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
