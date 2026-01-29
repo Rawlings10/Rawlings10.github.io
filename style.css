@@ -70,34 +70,40 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICONS */
+/* ICONS — JUST ICONS */
 .profile-icons {
   margin-top: 20px;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 .icon-link {
   position: relative;
   display: inline-flex;
+  text-decoration: none;
 }
 
+/* icon images */
 .icon-link img {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  background: none;
+  border-radius: 0;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
+/* hover effect */
 .icon-link:hover img {
   transform: translateY(-4px);
-  filter: brightness(1.2);
+  filter: brightness(1.25);
 }
 
 /* Tooltip */
 .icon-link::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -32px;
+  bottom: -34px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #7aa2ff;
@@ -113,7 +119,7 @@ body {
   opacity: 1;
 }
 
-/* CONTENT — spacing tightened */
+/* CONTENT */
 .content {
   padding: 20px 60px 80px;
   max-width: 1200px;
