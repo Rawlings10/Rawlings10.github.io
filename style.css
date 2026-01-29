@@ -34,7 +34,7 @@ body {
   color: floralwhite;
 }
 
-/* NEW ROLE TEXT */
+/* Role */
 .role {
   font-size: 20px;
   letter-spacing: 2px;
@@ -75,30 +75,23 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* PROFILE BUTTONS */
-.profile-buttons {
+/* ICON LINKS */
+.profile-icons {
   margin-top: 25px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 220px;
+  gap: 18px;
 }
 
-.profile-buttons a {
-  text-decoration: none;
-  text-align: center;
-  padding: 10px 0;
-  border: 2px solid #7aa2ff;
-  color: #7aa2ff;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+.profile-icons a img {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
-.profile-buttons a:hover {
-  background-color: #7aa2ff;
-  color: #0e141c;
+.profile-icons a img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
 }
 
 /* Main content */
@@ -145,5 +138,9 @@ body {
   .header-text hr {
     width: 60%;
     margin: 0 auto 25px;
+  }
+
+  .profile-icons {
+    justify-content: center;
   }
 }
