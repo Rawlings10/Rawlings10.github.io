@@ -75,22 +75,22 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICON LINKS (INCREASED SIZE) */
+/* ICON LINKS (INCREASED AGAIN) */
 .profile-icons {
-  margin-top: 28px;
+  margin-top: 30px;
   display: flex;
-  gap: 22px;
+  gap: 26px;
 }
 
 .profile-icons a img {
-  width: 50px;      /* increased from 42px */
-  height: 50px;     /* increased from 42px */
+  width: 58px;      /* increased from 50px */
+  height: 58px;     /* increased from 50px */
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
 
 .profile-icons a img:hover {
-  transform: scale(1.18);  /* slightly stronger hover */
+  transform: scale(1.22);  /* adjusted to match size */
   filter: brightness(1.2);
 }
 
