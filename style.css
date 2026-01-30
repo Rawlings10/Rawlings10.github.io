@@ -38,7 +38,7 @@ body {
   gap: 50px;
 }
 
-/* LEFT */
+/* LEFT TEXT */
 .header-text {
   width: 65%;
 }
@@ -88,7 +88,7 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ICONS — NO SHAPES */
+/* ICON LINKS — JUST ICONS */
 .profile-icons {
   margin-top: 20px;
   display: flex;
@@ -98,11 +98,17 @@ body {
 .icon-link {
   position: relative;
   display: inline-flex;
+  text-decoration: none;
+  background: none;
+  border: none;
 }
 
 .icon-link img {
   width: 46px;
   height: 46px;
+  border: none;
+  border-radius: 0;
+  background: none;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
