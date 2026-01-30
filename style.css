@@ -21,13 +21,11 @@ body {
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  z-index: 1000;
-  transition: transform 0.2s ease, brightness 0.2s ease;
+  z-index: 999;
 }
 
 .lang-toggle:hover {
   transform: translateY(-2px);
-  filter: brightness(1.1);
 }
 
 /* ===== HEADER ===== */
@@ -89,7 +87,8 @@ body {
   align-items: center;
 }
 
-.header-image img {
+/* profile photo stays circular */
+.header-image > img {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -97,7 +96,7 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ===== PROFILE ICON LINKS — ICONS ONLY ===== */
+/* ===== PROFILE ICON LINKS — PURE ICONS ===== */
 
 .profile-icons {
   margin-top: 24px;
@@ -106,27 +105,31 @@ body {
   justify-content: center;
 }
 
-.icon-link {
-  position: relative;
-  display: inline-flex;
-  text-decoration: none;
+.profile-icons img {
+  width: 52px;
+  height: 52px;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
+/* hover lift only */
 .icon-link img {
-  width: 54px;
-  height: 54px;
-  border: none;
-  background: none;
-  border-radius: 0;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .icon-link:hover img {
   transform: translateY(-4px);
-  filter: brightness(1.2);
+  filter: brightness(1.15);
 }
 
-/* Tooltip */
+/* tooltip */
+
+.icon-link {
+  position: relative;
+  text-decoration: none;
+}
 
 .icon-link::after {
   content: attr(data-tooltip);
@@ -156,7 +159,7 @@ body {
   margin: 0 auto;
 }
 
-/* ===== PROJECT SECTION HEADER ===== */
+/* ===== PROJECT HEADER ===== */
 
 .section-header {
   margin: 10px 0 30px 0;
@@ -175,15 +178,22 @@ body {
   border: none;
 }
 
-/* ===== PROJECT GRID ===== */
+/* ===== PROJECT GRID — FORCE ROW LAYOUT ===== */
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 30px;
 }
 
-/* project card */
+/* fallback if class typo */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px;
+}
+
+/* cards */
 
 .project-card {
   background: #111a26;
@@ -204,14 +214,12 @@ body {
   border-radius: 8px;
 }
 
-/* title */
+/* text */
 
 .project-card h3 {
   margin: 14px 0 6px;
   color: floralwhite;
 }
-
-/* genre */
 
 .genre {
   color: #7aa2ff;
@@ -230,19 +238,15 @@ body {
   border-radius: 6px;
   font-size: 14px;
   font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.project-btn:hover {
-  transform: translateY(-2px);
 }
 
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 1000px) {
 
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .project-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .header-container {
@@ -259,14 +263,12 @@ body {
     width: 70%;
     margin: 0 auto 20px;
   }
-
-  .profile-icons {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 640px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+
+  .project-grid,
+  .projects-grid {
+    grid-template-columns: 1fr !important;
   }
 }
