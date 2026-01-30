@@ -12,7 +12,7 @@
 <body>
 
 <!-- ===== LANGUAGE BUTTON ===== -->
-<button class="lang-toggle">FR</button>
+<button class="lang-toggle" onclick="toggleLang()">FR</button>
 
 <!-- ===== HEADER ===== -->
 <header class="header">
@@ -20,21 +20,33 @@
 
     <!-- LEFT -->
     <div class="header-text">
-      <h1>RAWLINGS ODUWA</h1>
-      <p class="role">Video Game Programmer / Designer</p>
+      <h1 data-en="RAWLINGS ODUWA" data-fr="RAWLINGS ODUWA">RAWLINGS ODUWA</h1>
+
+      <p class="role"
+         data-en="Video Game Programmer / Designer"
+         data-fr="Programmeur / Concepteur de Jeux Vidéo">
+         Video Game Programmer / Designer
+      </p>
+
       <hr>
 
-      <p class="subtitle">
+      <p class="subtitle"
+         data-en="Passionate game development student with over three years of hands-on experience building interactive projects using modern tools and engines."
+         data-fr="Étudiant passionné en développement de jeux avec plus de trois ans d'expérience pratique dans la création de projets interactifs avec des outils modernes.">
         Passionate game development student with over <strong>three years of hands-on experience</strong>
         building interactive projects using modern tools and engines.
       </p>
 
-      <p class="subtitle">
+      <p class="subtitle"
+         data-en="Technical stack includes Unreal Engine, Unity, C++, C#, Java, Python, Blender with strong focus on gameplay systems and clean architecture."
+         data-fr="Compétences techniques : Unreal Engine, Unity, C++, C#, Java, Python, Blender avec un fort accent sur les systèmes de gameplay et l’architecture propre.">
         Technical stack includes <em>Unreal Engine, Unity, C++, C#, Java, Python, Blender</em>
         with strong focus on gameplay systems and clean architecture.
       </p>
 
-      <p class="subtitle">
+      <p class="subtitle"
+         data-en="Currently seeking a Summer 2026 internship to contribute, collaborate, and grow within a professional game development team."
+         data-fr="À la recherche d’un stage pour l’été 2026 afin de contribuer, collaborer et évoluer dans une équipe professionnelle de développement de jeux.">
         Currently seeking a <strong>Summer 2026 internship</strong> to contribute, collaborate,
         and grow within a professional game development team.
       </p>
@@ -85,57 +97,77 @@
 <main class="content">
 
   <div class="section-header">
-    <h2>Projects</h2>
+    <h2 data-en="Projects" data-fr="Projets">Projects</h2>
     <hr>
   </div>
 
   <div class="project-grid">
 
-    <!-- PROJECT CARD 1 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game1.mp4" type="video/mp4">
       </video>
 
       <h3>Shadow Ruins</h3>
-      <p class="genre">Action Adventure</p>
+      <p class="genre"
+         data-en="Action Adventure"
+         data-fr="Action Aventure">Action Adventure</p>
 
-      <a href="project1.html" class="project-btn">
-        View Details
-      </a>
+      <a href="project1.html" class="project-btn"
+         data-en="View Details"
+         data-fr="Voir Détails">View Details</a>
     </div>
 
-    <!-- PROJECT CARD 2 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game2.mp4" type="video/mp4">
       </video>
 
       <h3>Echo Protocol</h3>
-      <p class="genre">Sci-Fi Puzzle</p>
+      <p class="genre"
+         data-en="Sci-Fi Puzzle"
+         data-fr="Puzzle Science-Fiction">Sci-Fi Puzzle</p>
 
-      <a href="project2.html" class="project-btn">
-        View Details
-      </a>
+      <a href="project2.html" class="project-btn"
+         data-en="View Details"
+         data-fr="Voir Détails">View Details</a>
     </div>
 
-    <!-- PROJECT CARD 3 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game3.mp4" type="video/mp4">
       </video>
 
       <h3>Last Colony</h3>
-      <p class="genre">Strategy Survival</p>
+      <p class="genre"
+         data-en="Strategy Survival"
+         data-fr="Stratégie Survie">Strategy Survival</p>
 
-      <a href="project3.html" class="project-btn">
-        View Details
-      </a>
+      <a href="project3.html" class="project-btn"
+         data-en="View Details"
+         data-fr="Voir Détails">View Details</a>
     </div>
 
   </div>
 
 </main>
+
+<!-- ===== TRANSLATE SCRIPT ===== -->
+
+<script>
+let currentLang = "en";
+
+function toggleLang() {
+  currentLang = currentLang === "en" ? "fr" : "en";
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.innerHTML = el.getAttribute("data-" + currentLang);
+  });
+
+  document.querySelector(".lang-toggle").innerText =
+    currentLang === "en" ? "FR" : "EN";
+}
+</script>
 
 </body>
 </html>
