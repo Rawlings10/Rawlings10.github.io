@@ -1,103 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Rawlings Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawlings Oduwa | Game Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<button id="langToggle">FR</button>
+<!-- ===== LANGUAGE BUTTON ===== -->
+<button class="lang-toggle">FR</button>
 
+<!-- ===== HEADER ===== -->
 <header class="header">
   <div class="header-container">
 
-    <!-- LEFT TEXT -->
+    <!-- LEFT -->
     <div class="header-text">
       <h1>RAWLINGS ODUWA</h1>
       <p class="role">Video Game Programmer / Designer</p>
       <hr>
 
       <p class="subtitle">
-        Passionate game development student with 3+ years experience building
-        interactive projects using <em>Unreal Engine, Unity, C++, C#, Java,
-        Python, and Blender</em>.
+        Passionate game development student with over <strong>three years of hands-on experience</strong>
+        building interactive projects using modern tools and engines.
       </p>
 
       <p class="subtitle">
-        Currently seeking a Summer 2026 internship opportunity to collaborate
-        with a professional team, grow technically, and contribute to high-quality
-        game experiences.
+        Technical stack includes <em>Unreal Engine, Unity, C++, C#, Java, Python, Blender</em>
+        with strong focus on gameplay systems and clean architecture.
+      </p>
+
+      <p class="subtitle">
+        Currently seeking a <strong>Summer 2026 internship</strong> to contribute, collaborate,
+        and grow within a professional game development team.
       </p>
     </div>
 
-    <!-- RIGHT IMAGE + ICONS -->
+    <!-- RIGHT -->
     <div class="header-image">
-      <img src="profile.jpg" alt="Profile Photo">
+      <img src="profile.jpg" alt="Rawlings Oduwa">
 
       <div class="profile-icons">
-        <a href="https://linkedin.com" class="icon-link" data-tooltip="LinkedIn" target="_blank">
-          <img src="icons/linkedin.png">
+
+        <a href="https://www.linkedin.com/in/rawlings-oduwa-32066b2a7"
+           target="_blank"
+           class="icon-link"
+           data-tooltip="LinkedIn">
+          <img src="linkedin.png">
         </a>
 
-        <a href="https://github.com" class="icon-link" data-tooltip="GitHub" target="_blank">
-          <img src="icons/github.png">
+        <a href="https://itch.io/profile/rawlings"
+           target="_blank"
+           class="icon-link"
+           data-tooltip="Itch.io">
+          <img src="itchio.png">
         </a>
 
-        <a href="resume.pdf" class="icon-link" data-tooltip="Resume" target="_blank">
-          <img src="icons/resume.png">
+        <a href="Rawlings_Oduwa_Resume.pdf"
+           download
+           class="icon-link"
+           data-tooltip="Resume">
+          <img src="resume.png">
         </a>
 
-        <a href="https://itch.io" class="icon-link" data-tooltip="itch.io" target="_blank">
-          <img src="icons/itch.png">
+        <a href="https://github.com/Rawlings10"
+           target="_blank"
+           class="icon-link"
+           data-tooltip="GitHub">
+          <img src="github.png">
         </a>
+
       </div>
     </div>
 
   </div>
 </header>
 
-<!-- PROJECT SECTION -->
+<!-- ===== PROJECT SECTION ===== -->
+
 <main class="content">
 
   <div class="section-header">
-    <h2>PROJECTS</h2>
+    <h2>Projects</h2>
     <hr>
   </div>
 
-  <div class="projects-grid">
+  <div class="project-grid">
 
-    <!-- Project 1 -->
+    <!-- PROJECT CARD 1 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game1.mp4" type="video/mp4">
       </video>
-      <h3>Shadow Protocol</h3>
-      <p class="genre">Stealth Action</p>
-      <a href="project1.html" class="project-btn">View Details</a>
+
+      <h3>Shadow Ruins</h3>
+      <p class="genre">Action Adventure</p>
+
+      <a href="project1.html" class="project-btn">
+        View Details
+      </a>
     </div>
 
-    <!-- Project 2 -->
+    <!-- PROJECT CARD 2 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game2.mp4" type="video/mp4">
       </video>
-      <h3>Echo Drift</h3>
+
+      <h3>Echo Protocol</h3>
       <p class="genre">Sci-Fi Puzzle</p>
-      <a href="project2.html" class="project-btn">View Details</a>
+
+      <a href="project2.html" class="project-btn">
+        View Details
+      </a>
     </div>
 
-    <!-- Project 3 -->
+    <!-- PROJECT CARD 3 -->
     <div class="project-card">
       <video controls muted loop>
         <source src="videos/game3.mp4" type="video/mp4">
       </video>
-      <h3>Grim Hollow</h3>
-      <p class="genre">Horror Adventure</p>
-      <a href="project3.html" class="project-btn">View Details</a>
+
+      <h3>Last Colony</h3>
+      <p class="genre">Strategy Survival</p>
+
+      <a href="project3.html" class="project-btn">
+        View Details
+      </a>
     </div>
 
   </div>
