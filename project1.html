@@ -11,18 +11,13 @@
 
 <body>
 
-<!-- ===== LANGUAGE BUTTON ===== -->
 <button class="lang-toggle" onclick="toggleLang()">FR</button>
 
-<!-- ===== PAGE HEADER ===== -->
 <header class="header">
   <div class="header-container">
-
     <div class="header-text">
 
-      <h1
-        data-en="Shadow Ruins"
-        data-fr="Ruines de l’Ombre">
+      <h1 data-en="Shadow Ruins" data-fr="Ruines de l’Ombre">
         Shadow Ruins
       </h1>
 
@@ -35,27 +30,24 @@
       <hr>
 
       <p class="subtitle"
-         data-en="A third-person action adventure prototype focused on combat flow, traversal, and environmental storytelling."
-         data-fr="Un prototype d’action-aventure à la troisième personne axé sur le combat, l’exploration et la narration environnementale.">
-        A third-person action adventure prototype focused on combat flow,
-        traversal, and environmental storytelling.
+         data-en="A third-person action adventure prototype focused on combat flow and traversal."
+         data-fr="Un prototype d’action-aventure à la troisième personne axé sur le combat et l’exploration.">
+         A third-person action adventure prototype focused on combat flow and traversal.
       </p>
 
     </div>
-
   </div>
 </header>
 
-<!-- ===== PROJECT CONTENT ===== -->
-
 <main class="content">
 
-  <!-- VIDEO -->
-  <video controls width="100%">
-    <source src="videos/game1.mp4" type="video/mp4">
-  </video>
+  <!-- square video -->
+  <div class="project-video-wrap">
+    <video controls>
+      <source src="videos/game1.mp4" type="video/mp4">
+    </video>
+  </div>
 
-  <!-- DETAILS -->
   <div class="section-header">
     <h2 data-en="Project Description" data-fr="Description du Projet">
       Project Description
@@ -64,53 +56,12 @@
   </div>
 
   <p class="subtitle"
-     data-en="This project was built in Unreal Engine and focuses on responsive melee combat, enemy AI behavior, and level pacing."
-     data-fr="Ce projet a été réalisé avec Unreal Engine et met l’accent sur le combat rapproché, l’IA des ennemis et le rythme des niveaux.">
-    This project was built in Unreal Engine and focuses on responsive
-    melee combat, enemy AI behavior, and level pacing.
+     data-en="Built in Unreal Engine with combat, AI, and animation systems."
+     data-fr="Développé avec Unreal Engine avec systèmes de combat, IA et animation.">
+     Built in Unreal Engine with combat, AI, and animation systems.
   </p>
 
-  <p class="subtitle"
-     data-en="Core systems implemented include animation state machines, hit detection, damage systems, and player ability mechanics."
-     data-fr="Les systèmes principaux incluent les machines d’animation, la détection des coups, le système de dégâts et les mécaniques de capacités du joueur.">
-    Core systems implemented include animation state machines,
-    hit detection, damage systems, and player ability mechanics.
-  </p>
-
-  <!-- TECH STACK -->
-  <div class="section-header">
-    <h2 data-en="Technology Used" data-fr="Technologies Utilisées">
-      Technology Used
-    </h2>
-    <hr>
-  </div>
-
-  <p class="subtitle"
-     data-en="Unreal Engine 5, C++, Blueprint, Blender"
-     data-fr="Unreal Engine 5, C++, Blueprint, Blender">
-    Unreal Engine 5, C++, Blueprint, Blender
-  </p>
-
-  <!-- LINKS -->
-  <div class="section-header">
-    <h2 data-en="Play / Download" data-fr="Jouer / Télécharger">
-      Play / Download
-    </h2>
-    <hr>
-  </div>
-
-  <a href="https://itch.io/your-game-link"
-     target="_blank"
-     class="project-btn"
-     data-en="Open on Itch.io"
-     data-fr="Ouvrir sur Itch.io">
-     Open on Itch.io
-  </a>
-
-  <br><br>
-
-  <a href="index.html"
-     class="project-btn"
+  <a href="index.html" class="project-btn"
      data-en="← Back to Portfolio"
      data-fr="← Retour au Portfolio">
      ← Back to Portfolio
@@ -118,21 +69,24 @@
 
 </main>
 
-<!-- ===== TRANSLATE SCRIPT ===== -->
-
 <script>
-let currentLang = "en";
+let currentLang = localStorage.getItem("lang") || "en";
 
-function toggleLang() {
-  currentLang = currentLang === "en" ? "fr" : "en";
-
+function applyLang() {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.innerHTML = el.getAttribute("data-" + currentLang);
   });
-
   document.querySelector(".lang-toggle").innerText =
     currentLang === "en" ? "FR" : "EN";
 }
+
+function toggleLang() {
+  currentLang = currentLang === "en" ? "fr" : "en";
+  localStorage.setItem("lang", currentLang);
+  applyLang();
+}
+
+applyLang();
 </script>
 
 </body>
