@@ -87,7 +87,6 @@ body {
   align-items: center;
 }
 
-/* profile photo stays circular */
 .header-image > img {
   width: 220px;
   height: 220px;
@@ -114,7 +113,6 @@ body {
   border-radius: 0 !important;
 }
 
-/* hover lift only */
 .icon-link img {
   transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -178,7 +176,7 @@ body {
   border: none;
 }
 
-/* ===== PROJECT GRID — FORCE ROW LAYOUT ===== */
+/* ===== PROJECT GRID ===== */
 
 .project-grid {
   display: grid !important;
@@ -186,7 +184,6 @@ body {
   gap: 30px;
 }
 
-/* fallback if class typo */
 .projects-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
@@ -207,14 +204,22 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
-/* video */
+/* ===== PROJECT VIDEO — SQUARE FIX ===== */
 
-.project-card video {
+.project-video-wrap {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   border-radius: 8px;
 }
 
-/* text */
+.project-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== PROJECT CARD TEXT ===== */
 
 .project-card h3 {
   margin: 14px 0 6px;
