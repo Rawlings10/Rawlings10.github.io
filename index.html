@@ -18,7 +18,6 @@
 <header class="header">
   <div class="header-container">
 
-    <!-- LEFT -->
     <div class="header-text">
       <h1 data-en="RAWLINGS ODUWA" data-fr="RAWLINGS ODUWA">RAWLINGS ODUWA</h1>
 
@@ -109,6 +108,7 @@
       </video>
 
       <h3>Shadow Ruins</h3>
+
       <p class="genre"
          data-en="Action Adventure"
          data-fr="Action Aventure">Action Adventure</p>
@@ -124,6 +124,7 @@
       </video>
 
       <h3>Echo Protocol</h3>
+
       <p class="genre"
          data-en="Sci-Fi Puzzle"
          data-fr="Puzzle Science-Fiction">Sci-Fi Puzzle</p>
@@ -139,6 +140,7 @@
       </video>
 
       <h3>Last Colony</h3>
+
       <p class="genre"
          data-en="Strategy Survival"
          data-fr="Stratégie Survie">Strategy Survival</p>
@@ -152,14 +154,12 @@
 
 </main>
 
-<!-- ===== TRANSLATE SCRIPT ===== -->
+<!-- ===== FIXED TRANSLATE SCRIPT ===== -->
 
 <script>
-let currentLang = "en";
+let currentLang = localStorage.getItem("lang") || "en";
 
-function toggleLang() {
-  currentLang = currentLang === "en" ? "fr" : "en";
-
+function applyLang() {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.innerHTML = el.getAttribute("data-" + currentLang);
   });
@@ -167,6 +167,14 @@ function toggleLang() {
   document.querySelector(".lang-toggle").innerText =
     currentLang === "en" ? "FR" : "EN";
 }
+
+function toggleLang() {
+  currentLang = currentLang === "en" ? "fr" : "en";
+  localStorage.setItem("lang", currentLang);
+  applyLang();
+}
+
+applyLang();
 </script>
 
 </body>
