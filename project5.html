@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Last Colony | Project Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button class="lang-toggle" onclick="toggleLang()">FR</button>
+
+<header class="header">
+<div class="header-container">
+<div class="header-text">
+
+<h1 data-en="Last Colony" data-fr="Dernière Colonie">Last Colony</h1>
+
+<p class="role"
+data-en="Strategy Survival Game"
+data-fr="Jeu Stratégie Survie">
+Strategy Survival Game
+</p>
+
+<hr>
+
+<p class="subtitle"
+data-en="A survival strategy prototype focused on resource management."
+data-fr="Prototype de stratégie de survie centré sur la gestion des ressources.">
+A survival strategy prototype focused on resource management.
+</p>
+
+</div>
+</div>
+</header>
+
+<main class="content">
+
+<div class="project-video-wrap">
+<video controls>
+<source src="videos/game3.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="section-header">
+<h2 data-en="Project Description" data-fr="Description du Projet">Project Description</h2>
+<hr>
+</div>
+
+<p class="subtitle"
+data-en="Includes AI agents, base building, and threat simulation."
+data-fr="Inclut IA, construction de base et simulation de menaces.">
+Includes AI agents, base building, and threat simulation.
+</p>
+
+<div class="project-button-row">
+
+<a href="index.html" class="project-btn"
+data-en="← Back to Portfolio"
+data-fr="← Retour au Portfolio">
+← Back to Portfolio
+</a>
+
+<a href="https://rawlings.itch.io/last-colony"
+target="_blank"
+class="project-btn"
+data-en="Play on Itch.io"
+data-fr="Jouer sur Itch.io">
+Play on Itch.io
+</a>
+
+</div>
+
+</main>
+
+<script>
+let currentLang = localStorage.getItem("lang") || "en";
+function applyLang(){document.querySelectorAll("[data-en]").forEach(el=>{el.innerHTML=el.getAttribute("data-"+currentLang);});
+document.querySelector(".lang-toggle").innerText=currentLang==="en"?"FR":"EN";}
+function toggleLang(){currentLang=currentLang==="en"?"fr":"en";localStorage.setItem("lang",currentLang);applyLang();}
+applyLang();
+</script>
+
+</body>
+</html>
