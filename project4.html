@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echo Protocol | Project Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button class="lang-toggle" onclick="toggleLang()">FR</button>
+
+<header class="header">
+<div class="header-container">
+<div class="header-text">
+
+<h1 data-en="Echo Protocol" data-fr="Protocole Écho">Echo Protocol</h1>
+
+<p class="role"
+data-en="Sci-Fi Puzzle Game"
+data-fr="Jeu Puzzle Science-Fiction">
+Sci-Fi Puzzle Game
+</p>
+
+<hr>
+
+<p class="subtitle"
+data-en="A sci-fi puzzle experience built around signal logic and system interaction."
+data-fr="Une expérience puzzle sci-fi basée sur la logique de signal et les systèmes interactifs.">
+A sci-fi puzzle experience built around signal logic and system interaction.
+</p>
+
+</div>
+</div>
+</header>
+
+<main class="content">
+
+<div class="project-video-wrap">
+<video controls>
+<source src="videos/game2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="section-header">
+<h2 data-en="Project Description" data-fr="Description du Projet">Project Description</h2>
+<hr>
+</div>
+
+<p class="subtitle"
+data-en="Designed with modular puzzle systems and progressive difficulty scaling."
+data-fr="Conçu avec des systèmes modulaires et une difficulté progressive.">
+Designed with modular puzzle systems and progressive difficulty scaling.
+</p>
+
+<div class="project-button-row">
+
+<a href="index.html" class="project-btn"
+data-en="← Back to Portfolio"
+data-fr="← Retour au Portfolio">
+← Back to Portfolio
+</a>
+
+<a href="https://rawlings.itch.io/echo-protocol"
+target="_blank"
+class="project-btn"
+data-en="Play on Itch.io"
+data-fr="Jouer sur Itch.io">
+Play on Itch.io
+</a>
+
+</div>
+
+</main>
+
+<script>
+let currentLang = localStorage.getItem("lang") || "en";
+function applyLang(){
+document.querySelectorAll("[data-en]").forEach(el=>{
+el.innerHTML = el.getAttribute("data-"+currentLang);
+});
+document.querySelector(".lang-toggle").innerText =
+currentLang === "en" ? "FR" : "EN";
+}
+function toggleLang(){
+currentLang = currentLang === "en" ? "fr" : "en";
+localStorage.setItem("lang", currentLang);
+applyLang();
+}
+applyLang();
+</script>
+
+</body>
+</html>
