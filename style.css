@@ -208,7 +208,7 @@ body {
 
 .project-video-wrap {
   width: 45%;
-  margin: 5px 0 0; /* 🔥 FIXED GAP */
+  margin: 60px 0 0; /* 🔥 FIXED GAP */
 }
 
 .project-video-wrap video {
