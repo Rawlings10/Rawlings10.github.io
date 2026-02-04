@@ -5,25 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Splink | Project Details</title>
 
+  <link rel="icon" type="image/png" href="webicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<link rel="icon" type="image/png" href="webicon.png">
-  
 <body>
 
-<!-- ===== LANGUAGE BUTTON ===== -->
 <button class="lang-toggle" onclick="toggleLang()">FR</button>
 
-<!-- ===== HEADER ===== -->
 <header class="header">
   <div class="header-container">
     <div class="header-text">
 
-      <h1 data-en="Splink" data-fr="Splink">
-        Splink
-      </h1>
+      <h1 data-en="Splink" data-fr="Splink">Splink</h1>
 
       <p class="role"
          data-en="Adventure Strategy Game"
@@ -43,12 +38,9 @@
   </div>
 </header>
 
-<!-- ===== CONTENT ===== -->
 <main class="content">
 
-  <!-- ===== VIDEO DEMO ===== -->
   <div class="project-video-wrap">
-
     <p class="video-label"
        data-en="Gameplay Demo"
        data-fr="Démo de Gameplay">
@@ -57,12 +49,9 @@
 
     <video controls>
       <source src="videos/SplinkDemo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
-
   </div>
 
-  <!-- ===== DESCRIPTION ===== -->
   <div class="section-header">
     <h2 data-en="Project Description" data-fr="Description du Projet">
       Project Description
@@ -76,28 +65,22 @@
     Built in Unreal Engine with combat, AI, and animation systems.
   </p>
 
-  <!-- ===== BUTTONS ===== -->
   <div class="project-actions">
-
     <a href="index.html" class="project-btn"
        data-en="← Back to Portfolio"
        data-fr="← Retour au Portfolio">
       ← Back to Portfolio
     </a>
 
-    <a href="https://itch.io"
-       target="_blank"
-       class="project-btn"
+    <a href="https://itch.io" target="_blank" class="project-btn"
        data-en="View on Itch.io"
        data-fr="Voir sur Itch.io">
       View on Itch.io
     </a>
-
   </div>
 
 </main>
 
-<!-- ===== TRANSLATION SCRIPT ===== -->
 <script>
 let currentLang = localStorage.getItem("lang") || "en";
 
