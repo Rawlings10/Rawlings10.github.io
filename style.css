@@ -48,7 +48,7 @@ body {
 .header-text h1 {
   font-family: 'Cinzel', serif;
   font-size: 60px;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: floralwhite;
 }
 
@@ -57,7 +57,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #7aa2ff;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .header-text hr {
@@ -65,13 +65,13 @@ body {
   height: 3px;
   background-color: #7aa2ff;
   border: none;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .subtitle {
   font-size: 17px;
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 /* ===== RIGHT PROFILE ===== */
@@ -91,7 +91,7 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ===== PROFILE ICONS (RESTORED SIZE) ===== */
+/* ===== PROFILE ICONS ===== */
 
 .profile-icons {
   margin-top: 24px;
@@ -106,7 +106,6 @@ body {
   display: block;
 }
 
-/* hover lift */
 .icon-link img {
   transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -124,16 +123,16 @@ body {
   margin: 0 auto;
 }
 
-/* ===== SECTION HEADER (BLUE RESTORED) ===== */
+/* ===== SECTION HEADER ===== */
 
 .section-header {
-  margin: 10px 0 30px 0;
+  margin: 10px 0 24px;
 }
 
 .section-header h2 {
   font-size: 34px;
   color: #7aa2ff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .section-header hr {
@@ -165,7 +164,7 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
-/* ===== HOME CARD VIDEOS (AUTOPLAY, SHORTER HEIGHT) ===== */
+/* ===== HOME CARD VIDEOS ===== */
 
 .project-card video {
   width: 100%;
@@ -205,11 +204,11 @@ body {
   background: #91b2ff;
 }
 
-/* ===== PROJECT PAGE VIDEO (SIZE RESTORED) ===== */
+/* ===== PROJECT PAGE VIDEO ===== */
 
 .project-video-wrap {
   width: 45%;
-  margin: 30px 0;
+  margin: 14px 0 0; /* 🔥 FIXED GAP */
 }
 
 .project-video-wrap video {
@@ -237,7 +236,7 @@ body {
 
   .header-text hr {
     width: 70%;
-    margin: 0 auto 20px;
+    margin: 10px auto;
   }
 
   .project-video-wrap {
