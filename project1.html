@@ -7,14 +7,14 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <link rel="icon" type="image/png" href="webicon.png">
 </head>
 
 <body>
 
+<!-- ===== LANGUAGE BUTTON ===== -->
 <button class="lang-toggle" onclick="toggleLang()">FR</button>
 
+<!-- ===== HEADER ===== -->
 <header class="header">
   <div class="header-container">
     <div class="header-text">
@@ -26,7 +26,7 @@
       <p class="role"
          data-en="Action Adventure Game"
          data-fr="Jeu d’Action Aventure">
-         Action Adventure Game
+        Action Adventure Game
       </p>
 
       <hr>
@@ -34,22 +34,33 @@
       <p class="subtitle"
          data-en="A third-person action adventure prototype focused on combat flow and traversal."
          data-fr="Un prototype d’action-aventure à la troisième personne axé sur le combat et l’exploration.">
-         A third-person action adventure prototype focused on combat flow and traversal.
+        A third-person action adventure prototype focused on combat flow and traversal.
       </p>
 
     </div>
   </div>
 </header>
 
+<!-- ===== CONTENT ===== -->
 <main class="content">
 
-  <!-- video — unchanged -->
+  <!-- ===== VIDEO DEMO ===== -->
   <div class="project-video-wrap">
+
+    <p class="video-label"
+       data-en="Gameplay Demo"
+       data-fr="Démo de Gameplay">
+      Gameplay Demo
+    </p>
+
     <video controls>
-      <source src="videos/game1.mp4" type="video/mp4">
+      <source src="videos/SplinkDemo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
+
   </div>
 
+  <!-- ===== DESCRIPTION ===== -->
   <div class="section-header">
     <h2 data-en="Project Description" data-fr="Description du Projet">
       Project Description
@@ -60,31 +71,31 @@
   <p class="subtitle"
      data-en="Built in Unreal Engine with combat, AI, and animation systems."
      data-fr="Développé avec Unreal Engine avec systèmes de combat, IA et animation.">
-     Built in Unreal Engine with combat, AI, and animation systems.
+    Built in Unreal Engine with combat, AI, and animation systems.
   </p>
 
-  <!-- ===== BUTTON ROW ===== -->
-
-  <div class="project-button-row">
+  <!-- ===== BUTTONS ===== -->
+  <div class="project-actions">
 
     <a href="index.html" class="project-btn"
        data-en="← Back to Portfolio"
        data-fr="← Retour au Portfolio">
-       ← Back to Portfolio
+      ← Back to Portfolio
     </a>
 
-    <a href="https://rawlings.itch.io/shadow-ruins"
+    <a href="https://itch.io"
        target="_blank"
        class="project-btn"
-       data-en="Play on Itch.io"
-       data-fr="Jouer sur Itch.io">
-       Play on Itch.io
+       data-en="View on Itch.io"
+       data-fr="Voir sur Itch.io">
+      View on Itch.io
     </a>
 
   </div>
 
 </main>
 
+<!-- ===== TRANSLATION SCRIPT ===== -->
 <script>
 let currentLang = localStorage.getItem("lang") || "en";
 
@@ -92,6 +103,7 @@ function applyLang() {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.innerHTML = el.getAttribute("data-" + currentLang);
   });
+
   document.querySelector(".lang-toggle").innerText =
     currentLang === "en" ? "FR" : "EN";
 }
