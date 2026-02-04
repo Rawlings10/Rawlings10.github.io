@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rawlings Oduwa | Game Developer</title>
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="webicon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -89,101 +92,56 @@
 
   <div class="project-grid">
 
-    <!-- PROJECT 1 -->
     <div class="project-card">
-      <video muted loop preload="none">
+      <video autoplay muted loop playsinline>
         <source src="videos/SplinkDemo.mp4" type="video/mp4">
       </video>
 
       <h3>Splink</h3>
-      <p class="genre"
-         data-en="Adventure Strategy"
-         data-fr="Aventure Stratégie">Adventure Strategy</p>
+      <p class="genre">Adventure Strategy</p>
 
-      <a href="project1.html"
-         class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <a href="project1.html" class="project-btn">View Details</a>
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="project-card">
-      <video muted loop preload="none"></video>
-
+      <video autoplay muted loop playsinline></video>
       <h3>Echo Protocol</h3>
-      <p class="genre"
-         data-en="Sci-Fi Puzzle"
-         data-fr="Puzzle Science-Fiction">Sci-Fi Puzzle</p>
-
-      <a href="project2.html" class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <p class="genre">Sci-Fi Puzzle</p>
+      <a href="project2.html" class="project-btn">View Details</a>
     </div>
 
-    <!-- PROJECT 3 -->
     <div class="project-card">
-      <video muted loop preload="none"></video>
-
+      <video autoplay muted loop playsinline></video>
       <h3>Last Colony</h3>
-      <p class="genre"
-         data-en="Strategy Survival"
-         data-fr="Stratégie Survie">Strategy Survival</p>
-
-      <a href="project3.html" class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <p class="genre">Strategy Survival</p>
+      <a href="project3.html" class="project-btn">View Details</a>
     </div>
 
-    <!-- PROJECT 4 -->
     <div class="project-card">
-      <video muted loop preload="none"></video>
-
+      <video autoplay muted loop playsinline></video>
       <h3>Last Colony</h3>
-      <p class="genre"
-         data-en="Strategy Survival"
-         data-fr="Stratégie Survie">Strategy Survival</p>
-
-      <a href="project3.html" class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <p class="genre">Strategy Survival</p>
+      <a href="project3.html" class="project-btn">View Details</a>
     </div>
 
-    <!-- PROJECT 5 -->
     <div class="project-card">
-      <video muted loop preload="none"></video>
-
+      <video autoplay muted loop playsinline></video>
       <h3>Last Colony</h3>
-      <p class="genre"
-         data-en="Strategy Survival"
-         data-fr="Stratégie Survie">Strategy Survival</p>
-
-      <a href="project3.html" class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <p class="genre">Strategy Survival</p>
+      <a href="project3.html" class="project-btn">View Details</a>
     </div>
 
-    <!-- PROJECT 6 -->
     <div class="project-card">
-      <video muted loop preload="none"></video>
-
+      <video autoplay muted loop playsinline></video>
       <h3>Last Colony</h3>
-      <p class="genre"
-         data-en="Strategy Survival"
-         data-fr="Stratégie Survie">Strategy Survival</p>
-
-      <a href="project3.html" class="project-btn"
-         data-en="View Details"
-         data-fr="Voir Détails">View Details</a>
+      <p class="genre">Strategy Survival</p>
+      <a href="project3.html" class="project-btn">View Details</a>
     </div>
-
 
   </div>
-
 </main>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-/* language */
 let currentLang = localStorage.getItem("lang") || "en";
 
 function applyLang() {
@@ -200,15 +158,6 @@ function toggleLang() {
   applyLang();
 }
 applyLang();
-
-/* hover autoplay */
-document.querySelectorAll(".project-card video").forEach(video => {
-  video.addEventListener("mouseenter", () => video.play());
-  video.addEventListener("mouseleave", () => {
-    video.pause();
-    video.currentTime = 0;
-  });
-});
 </script>
 
 </body>
