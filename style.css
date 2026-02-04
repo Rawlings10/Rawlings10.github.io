@@ -24,10 +24,6 @@ body {
   z-index: 999;
 }
 
-.lang-toggle:hover {
-  transform: translateY(-2px);
-}
-
 /* ===== HEADER ===== */
 
 .header {
@@ -69,13 +65,13 @@ body {
   height: 3px;
   background-color: #7aa2ff;
   border: none;
-  margin-bottom: 12px; /* SLIGHTLY REDUCED */
+  margin-bottom: 20px;
 }
 
 .subtitle {
   font-size: 17px;
   line-height: 1.7;
-  margin: 0 0 14px 0;
+  margin-bottom: 14px;
 }
 
 /* ===== RIGHT PROFILE ===== */
@@ -95,7 +91,7 @@ body {
   border: 3px solid #7aa2ff;
 }
 
-/* ===== PROFILE ICONS ===== */
+/* ===== PROFILE ICONS (RESTORED SIZE) ===== */
 
 .profile-icons {
   margin-top: 24px;
@@ -107,10 +103,10 @@ body {
 .profile-icons img {
   width: 52px;
   height: 52px;
-  background: none;
-  border: none;
+  display: block;
 }
 
+/* hover lift */
 .icon-link img {
   transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -128,16 +124,16 @@ body {
   margin: 0 auto;
 }
 
-/* ===== SECTION HEADER ===== */
+/* ===== SECTION HEADER (BLUE RESTORED) ===== */
 
 .section-header {
-  margin: 10px 0 20px 0; /* REDUCED GAP */
+  margin: 10px 0 30px 0;
 }
 
 .section-header h2 {
   font-size: 34px;
   color: #7aa2ff;
-  margin: 0 0 6px;
+  margin-bottom: 8px;
 }
 
 .section-header hr {
@@ -169,17 +165,17 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
-/* ===== HOME PAGE VIDEO ===== */
+/* ===== HOME CARD VIDEOS (AUTOPLAY, SHORTER HEIGHT) ===== */
 
 .project-card video {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
   display: block;
 }
 
-/* ===== PROJECT TEXT ===== */
+/* ===== TEXT ===== */
 
 .project-card h3 {
   margin: 14px 0 6px;
@@ -209,26 +205,17 @@ body {
   background: #91b2ff;
 }
 
-/* ===== PROJECT DETAIL PAGE VIDEO ===== */
-/* THIS IS WHERE THE GAP FIX IS */
+/* ===== PROJECT PAGE VIDEO (SIZE RESTORED) ===== */
 
 .project-video-wrap {
   width: 45%;
-  margin: 8px 0 24px 0; /* << FIXED: MUCH TIGHTER */
+  margin: 30px 0;
 }
 
 .project-video-wrap video {
   width: 100%;
   aspect-ratio: 1 / 1;
   display: block;
-}
-
-/* ===== PROJECT ACTION BUTTONS ===== */
-
-.project-actions {
-  margin-top: 24px;
-  display: flex;
-  gap: 16px;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -250,7 +237,7 @@ body {
 
   .header-text hr {
     width: 70%;
-    margin: 0 auto 16px;
+    margin: 0 auto 20px;
   }
 
   .project-video-wrap {
