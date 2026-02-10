@@ -251,6 +251,8 @@ body {
 
   /* ===== EXPERIENCE / SKILLS ===== */
 
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -272,6 +274,4 @@ body {
 .skill-box:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(122, 162, 255, 0.45);
-}
-
 }
