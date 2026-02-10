@@ -260,6 +260,13 @@ body {
   margin-top: 30px;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
 .skill-box {
   background: #7aa2ff;
   color: #0e141c;
